@@ -9,4 +9,4 @@ This repository is currently a work-in-progress. To use the project in its unfin
 - install [kind](https://kind.sigs.k8s.io/)
 - run `consul tls ca create` to generate `consul-agent-ca.pem` and `consul-agent-ca-key.pem`
 - paste the related files on lines [19](https://github.com/krastin/consul-demo-kind/blob/2b01c7e3e4a401415d17981ca5af81e8443da580/consul.tf#L19) and [35](https://github.com/krastin/consul-demo-kind/blob/2b01c7e3e4a401415d17981ca5af81e8443da580/consul.tf#L35) of `consul.tf`
-- run `terraform apply`
+- run `terraform init` followed by `terraform apply`
