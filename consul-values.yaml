@@ -1,0 +1,36 @@
+global:
+  acls:
+    enabled: true
+    manageSystemACLs: true
+    bootstrapToken:
+      secretName: "consul-consul-bootstrap-acl-token"
+      secretKey: "token"
+  tls:
+    enabled: true
+    enableAutoEncrypt: true
+    caCert:
+      secretName: "consul-ca-cert"
+      secretKey: "tls.crt"
+    caKey:
+      secretName: "consul-ca-key"
+      secretKey: "tls.key"
+dns:
+  type: "NodePort"
+
+server:
+  exposeService:
+    enabled: true
+    type: "NodePort"
+    nodePort:
+      https: "30501"
+      #http: "30500"
+      serf: "30301"
+      rpc: "30300"
+      grpc: "30502"
+ui:
+  service:
+    type: "NodePort"
+    nodePort:
+      https: "30443"
+      #http: "80"
+      #https: "443"
