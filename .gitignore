@@ -1,0 +1,3 @@
+kind-kubeconfig
+terraform.tfstate*
+consul-ca.pem
